@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\interfaces\AuthInterface;
+use App\Repository\AuthServiceRepository;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,6 +15,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton(AuthInterface::class, AuthServiceRepository::class);
     }
 }
