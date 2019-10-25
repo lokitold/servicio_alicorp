@@ -7,3 +7,10 @@ $router->get('/', function () use ($router) {
 });
 
 //Jeiner
+
+$router->post('login/','AuthController@getApiToken'); /*Jeiner*/
+
+$router->group(['middleware' => ['auth']], function () use ($router){
+
+});
+

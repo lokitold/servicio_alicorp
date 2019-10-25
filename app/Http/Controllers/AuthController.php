@@ -2,6 +2,8 @@
 
 
 namespace App\Http\Controllers;
+use App\Http\Controllers\Controller;
+
 use App\interfaces\AuthInterface;
 use Illuminate\Http\Request;
 
@@ -16,6 +18,7 @@ class AuthController
     }
 
     public  function  getApiToken (Request $request) {
+
         if ($request->isJson()){
             return $this->auth->login($request->all());
         }

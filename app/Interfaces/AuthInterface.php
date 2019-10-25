@@ -1,10 +1,12 @@
 <?php
 
 
-namespace App\Interfaces;
+namespace App\interfaces;
 
 
 interface AuthInterface
 {
     public  function login(array $data);
+
+    public function logOut();
 }
