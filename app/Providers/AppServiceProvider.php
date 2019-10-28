@@ -5,6 +5,8 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\repositories\AuthRepository;
 use App\interfaces\AuthInterface;
+use App\Interfaces\GustosInterface;
+use App\repositories\GustosRepository;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -16,5 +18,6 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(AuthInterface::class, AuthRepository::class);
+        $this->app->singleton(GustosInterface::class, GustosRepository::class);
     }
 }

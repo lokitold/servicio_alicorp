@@ -14,3 +14,5 @@ $router->group(['middleware' => ['auth']], function () use ($router){
 
 });
 
+$router->get('listar-categorias/','GustosController@listarCategoria'); /*Jeiner*/
+
