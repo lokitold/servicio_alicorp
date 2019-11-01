@@ -11,7 +11,6 @@ class Rol extends Model
 
     protected $fillable = [
         'rol_nombre',
-
     ];
 
 

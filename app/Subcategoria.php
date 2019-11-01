@@ -8,14 +8,20 @@ use Illuminate\Database\Eloquent\Model;
 class Subcategoria extends Model
 {
     protected $table = "subcategoria";
-    protected  $primaryKey = "ud_subcategoria";
+    protected  $primaryKey = "id_subcategoria";
+
+    public $timestamps=false;
 
     protected $fillable = [
         'sub_nombre',
         'sub_estado',
         'sub_descripcion',
-        'categoria_id',
+        'idcategoria',
         'created_at',
         'updated_at'
     ];
+
+    public  function  categoria() {
+        return $this->belongsTo('App\Categoria', 'idcategoria','idcategoria');
+    }
 }

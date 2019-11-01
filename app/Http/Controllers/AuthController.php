@@ -22,6 +22,8 @@ class AuthController
         if ($request->isJson()){
             return $this->auth->login($request->all());
         }
+
+
     }
 
 }

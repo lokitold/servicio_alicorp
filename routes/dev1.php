@@ -16,3 +16,4 @@ $router->group(['middleware' => ['auth']], function () use ($router){
 
 $router->get('listar-categorias/','GustosController@listarCategoria'); /*Jeiner*/
 
+$router->post('seleccionar-subcategoria/','GustosController@seleccionar_subcategoria'); /*Jeiner*/
