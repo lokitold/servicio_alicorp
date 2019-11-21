@@ -28,15 +28,17 @@ class GustosController
     public  function seleccionar_subcategoria(Request $request){
 
         if ($request->isJson()){
-
-            $api_token =  $request->header('Authorization');
-
-            $data  = [
-                'api_token' => $api_token,
-
-            ];
-
             return $this->gustos->seleccionar_subcategoria($request->all());
+        }
+    }
+
+    public  function  listar_archivos(Request $request){
+        if ($request->isJson()){
+             $api_token  = $request->header('Authorization');
+             $data = [
+                'api-token' => $api_token
+             ];
+            return $this->gustos->listar_archivos($data);
         }
     }
 

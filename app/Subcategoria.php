@@ -18,7 +18,8 @@ class Subcategoria extends Model
         'sub_descripcion',
         'idcategoria',
         'created_at',
-        'updated_at'
+        'updated_at',
+        'sub_icono'
     ];
 
     public  function  categoria() {

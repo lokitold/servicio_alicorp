@@ -10,5 +10,7 @@ interface GustosInterface
 
     public  function  seleccionar_subcategoria(array  $data);
 
+    public  function  listar_archivos(array  $data);
+
 
 }

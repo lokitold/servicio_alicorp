@@ -17,6 +17,7 @@ class Persona extends Model
         'per_telefono',
         'created_at',
         'updated_at',
+        'tipo_cliente_id',
     ];
 
     public  function  user() {
