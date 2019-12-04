@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /tmp/deploy-current/
+hooks:
+  AfterInstall:
+    - location: scripts/rsync.sh
+      timeout: 90
+      runas: roo
